@@ -1,0 +1,23 @@
+---
+- name: Ensure rsync is present
+  apt:
+   name: rsync
+   state: present
+   update_cache: yes
+  
+- name: Copy config files (rsync) for starting rsync daemon
+  copy:
+   src: rsync
+   dest: "{{ rsync_dst }}"
+   force: yes
+  notify:
+  - restart rsync
+   
+- name: Copy config files (rsyncd.conf) for starting rsync daemon
+  copy:
+   src: rsyncd.conf
+   dest: "{{ rsyncd_dst }}"
+   force: yes
+  notify:
+  - restart rsync
+# tasks file for rsyncinit

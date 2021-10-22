@@ -1,0 +1,5 @@
+---
+srv_address: 34.125.17.47
+rsync_dst: /etc/default
+rsyncd_dst: /etc
+# defaults file for rsyncinit

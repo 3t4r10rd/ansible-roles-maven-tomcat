@@ -4,11 +4,13 @@
   become: yes
   
   roles:
-   - maven
+  - rsyncinit   
+  - maven
    
 - name: tomcat configuration
   hosts: tomcat
   become: yes
   
   roles:
-   - tomcat
+  - rsyncinit
+  - tomcat
