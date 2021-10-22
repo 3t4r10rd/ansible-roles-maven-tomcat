@@ -1,0 +1,5 @@
+---
+dest_war: /var/lib/tomcat8/webapps
+src_war: /home/warforansible/target/hello-1.0.war
+remote_srv: 34.125.16.250
+# defaults file for tomcat

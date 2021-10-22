@@ -1,0 +1,19 @@
+---
+- name: Ensure that tomcat8 is present
+  apt: 
+   name: tomcat8
+   state: present
+
+- name: Ensure that tomcat8 is present
+  apt: 
+   name: rsync
+   state: present
+   
+- name: Copy war file from remote host
+  synchronize:
+   mode: push
+   dest: "{{ dest_war }}"
+   src: "{{ src_war }}"
+  delegate_to: "{{ remote_srv }}"
+  notify:
+   - restart tomcat
