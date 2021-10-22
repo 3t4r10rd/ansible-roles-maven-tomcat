@@ -1,4 +1,5 @@
 ---
+repository: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 git_repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 dest_war: /home/warforansible
 # defaults file for maven

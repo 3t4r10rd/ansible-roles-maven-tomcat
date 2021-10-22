@@ -12,8 +12,8 @@
 - name: Copy war file from remote host
   synchronize:
    mode: push
-   dest: "{{ dest_war }}"
-   src: "{{ src_war }}"
-  delegate_to: "{{ remote_srv }}"
+   dest: "{{ dest_war }}" #on server "tomcat"
+   src: "{{ src_war }}" #on remote server "maven"
+  delegate_to: "{{ maven_srv }}"
   notify:
    - restart tomcat
